@@ -16,7 +16,7 @@ const Pop = () => {
   // console.log(data)
   useEffect(() => {
     const GetMemes  = async() => {
-      const resq = await axios.get('http://127.0.0.1:4000/api/memes/popular')
+      const resq = await axios.get('https://meme-api-26tc.onrender.com/api/memes/popular')
       setData(resq.data.data)
       // const tim = time(resq.data.data.createdAt)
     }
