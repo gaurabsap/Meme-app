@@ -81,7 +81,7 @@ const Create = () => {
     }
     try {
       setLoad(true)
-        const resq = await axios.post('http://127.0.0.1:4000/api/create', data, { withCredentials: true })
+        const resq = await axios.post('https://meme-api-26tc.onrender.com/api/create', data, { withCredentials: true })
         // console.log(resq)
         if(resq.status == 200){
           navigate('/')

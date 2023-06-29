@@ -18,7 +18,7 @@ const Tren = () => {
   // console.log(data)
   useEffect(() => {
     const GetMemes  = async() => {
-      const resq = await axios.get('http://127.0.0.1:4000/api/memes/trend')
+      const resq = await axios.get('https://meme-api-26tc.onrender.com/api/memes/trend')
       setData(resq.data.data)
       // const tim = time(resq.data.data.createdAt)
     }

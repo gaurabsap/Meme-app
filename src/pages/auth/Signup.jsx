@@ -27,7 +27,7 @@ const Signup = () => {
         e.preventDefault()
         try {
             setLoad(true)
-            const resq=  await axios.post('http://127.0.0.1:4000/api/users/register', data)
+            const resq=  await axios.post('https://meme-api-26tc.onrender.com/api/users/register', data)
             console.log(resq)
             if(resq.status == 201){
                 setLoad(false)

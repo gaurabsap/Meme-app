@@ -18,7 +18,7 @@ const Home = () => {
   // console.log(data)
   useEffect(() => {
     const GetMemes = async () => {
-      const resq = await axios.get("http://127.0.0.1:4000/api/memes/data");
+      const resq = await axios.get("https://meme-api-26tc.onrender.com/api/memes/data");
       setData(resq.data.data);
       // console.log(resq.data.data[0].file.url)
       // console.log(resq)

@@ -8,7 +8,7 @@ const Post = () => {
     console.log(data)
     useEffect(() => {
         const GetData = async() => {
-            const resq = await axios.get(`http://127.0.0.1:4000/api/post/${id}`)
+            const resq = await axios.get(`https://meme-api-26tc.onrender.com/api/post/${id}`)
             console.log(resq)
             setData([resq.data.data])
         }
