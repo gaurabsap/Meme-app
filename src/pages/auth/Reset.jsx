@@ -24,7 +24,7 @@ const Reset = () => {
     e.preventDefault()
     try {
       setLoad(true)
-      const req = await axios.put(`http://127.0.0.1:4000/api/users/reset-password/${token}`, data)
+      const req = await axios.put(`https://meme-api-26tc.onrender.com/api/users/reset-password/${token}`, data)
       console.log(req)
 
       if(req.status == 200){
