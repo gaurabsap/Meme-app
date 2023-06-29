@@ -21,7 +21,7 @@ const Nav = () => {
 
   useEffect(() => {
     const UserProfile = async() => {
-      const resq = await axios.get('http://127.0.0.1:4000/api/users', {withCredentials: true})
+      const resq = await axios.get('https://meme-api-26tc.onrender.com/api/users', {withCredentials: true})
       // console.log(resq.data.data.username)
       setData([resq.data.data])
       setImage(resq.data.data.photo.url)
@@ -32,7 +32,7 @@ const Nav = () => {
 
 
   const Logout = async() => {
-    const resq = await axios.get('http://127.0.0.1:4000/api/users/logout', {withCredentials: true})
+    const resq = await axios.get('https://meme-api-26tc.onrender.com/api/users/logout', {withCredentials: true})
     console.log(resq)
     if(resq.status == 200){
       navigate('/')
