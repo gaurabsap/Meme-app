@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import loading from "../../assets/lod.gif";
 import "./profile.scss";
+import { useNavigate } from "react-router-dom";
 // import time from '../Time'
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [error, setError] = useState();
   const [load, setLoad] = useState(false);
   const inputRef = useRef(null);
@@ -94,7 +96,8 @@ const Profile = () => {
       console.log(resq);
       if (resq.status === 201) {
         setLoad(false);
-        location.reload();
+        // location.reload();
+        navigate("/profile");
         console.log(resq);
       } else {
         console.log(resq);
