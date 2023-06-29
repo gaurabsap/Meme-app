@@ -30,7 +30,7 @@ const Profile = () => {
   const [popup, setPopup] = useState(false)
   useEffect(() => {
         const GetData = async() => {
-            const resq = await axios.get('http://127.0.0.1:4000/api/users/data', {withCredentials: true})
+            const resq = await axios.get('https://meme-api-26tc.onrender.com/api/users/data', {withCredentials: true})
             // console.log(resq.data.data.photo.url)
             setData([resq.data.data])
             setProf(resq.data.data.photo.url)
