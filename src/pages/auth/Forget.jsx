@@ -14,7 +14,7 @@ const Forget = () => {
     e.preventDefault()
     try {
       setLoad(true)
-      const req = await axios.post('http://127.0.0.1:4000/api/users/forget-password', data)
+      const req = await axios.post('https://meme-api-26tc.onrender.com/api/users/forget-password', data)
       if(req.status == 200){
         setError(req.data.message)
         setEmail('')
